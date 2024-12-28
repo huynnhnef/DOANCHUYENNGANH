@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition:all .2s linear;
+  }
+a{
+    color: black;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: rgb(247, 246, 193);
+}
+
+
+section{
+    padding: 5rem 9%;
+
+}
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+
+}
+
+.heading::before{
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem;
+    background:  rgb(247, 246, 193);
+    z-index: -1;
+
+}
+
+.heading span {
+    font-size: 3rem;
+    padding: .5rem 35%; 
+    color: var(--black);
+    border: 3px solid;
+    border-top: none; border-left: none; border-right: none;
+    width: 100%;
+    padding: 10px 0;
+}
+.header .header-1{
+    background:  rgb(247, 246, 193);
+    padding:1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/*Chữ logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Điều chỉnh khoảng cách giữa logo và chữ */
+.logo img {
+    margin-right: 10px; 
+}
+
+/* Điều chỉnh chữ */
+.logo span {
+    margin-top: 2rem;
+    font-size: 2.5rem; 
+}
+.header .header-1 .logo{
+   
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:var(--black);
+}
+
+
+/* Màu logo */
+.header .header-1 .logo i{
+    color:rgb(253, 253, 253);
+}
+
+
+/* Định dạng form tìm kiếm */
+.header .header-1 .search-form{
+    
+    width:50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background:  rgb(247, 246, 193);
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    border-radius: .5rem;
+}
+
+/* Định dạng form tìm kiếm */
+.search-form {
+    position: relative; 
+    width: 100%; 
+}
+
+/* Định dạng trong ô tìm kiếm */
+.search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 40px; 
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-left: 40px; 
+}
+
+/* Định dạng biểu tượng kính lúp */
+.search-form label {
+    font-size: 2rem;
+    color: #ccc;
+    position: absolute;
+    top: 50%; 
+    left: 10px;
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+
+
+.search-form label:hover {
+    color: #333; 
+}
+
+
+.search-form input:focus {
+    border-color: #ffd700;
+}
+
+
+/* Định dạng các icons khác */
+.header .header-1 .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .icons a{ 
+    font-size: 2.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: rgb(0, 0, 0);
+}
+
+#search-btn{
+    display:none ;
+}
+
+
+/* dropdown user-icon */
+.header-1 {
+    display: flex; 
+    align-items: center; 
+}
+.header .header-1 .icons-accept a:hover{
+    
+}
+.icons {
+    display: flex; 
+    gap: 10px; 
+}
+
+.user-icon {
+    position: relative; 
+    margin: -6px 15px;
+    
+}
+
+.user-icon .dropdown {
+    display: none;
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    box-sizing: border-box;
+    min-width: 150px; 
+}
+
+.user-icon:hover .dropdown {
+    display: block;     
+    
+}
+.user-icon:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    width: 30px; 
+    height: 20px;
+   
+    border-radius: 5px;
+    z-index: 999; 
+    transform: translateX(-50%); 
+}
+
+.user-icon .fas.fa-user {
+    cursor: pointer;
+    margin-left: -10px;
+}
+
+.user-icon .dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.1rem !important;
+}
+
+.user-icon .dropdown a:hover {
+    background-color: #fbff7a;
+    
+}
+
+a.fas.fa-shopping-cart {
+    position: relative; 
+}
+
+.cart-count {
+    position: absolute;
+    top: -13px; 
+    right: -9px; 
+    background-color: red;
+    color: white; 
+    font-size: 14px; 
+    font-weight: bold; 
+    padding: 3px 7px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: rgb(247, 246, 193, 0.4);
+}
+.footer-content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.contact, .about, .other, .account{
+    margin-top: 5px;
+    width: 25%;
+
+}
+.contact h2, .about h2, .other h2, .account h2{
+    font-size: 2.4rem;
+    border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+}
+.contact img{
+    width: 20%;
+    margin-top: 10px;
+}
+.contact-icon-fb, .contact-icon-zalo{
+    width: 20%;
+}
+.contact-icon-yt img{
+    width: 9%;
+    margin-bottom: 2px;
+}
+.contact-icon-fb:hover img, .contact-icon-zalo:hover img{
+    transform: translateY(-5%);
+}
+.about p, .other p, .account p{
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.about p a:hover, .other p a:hover, .account p a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.address{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: rgb(51, 51, 51, 0.5);
+}
+
+
+/* CSS cho menu */
+.menu {
+    background-color: rgb(247, 246, 193);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-radius: 5px; 
+    position: relative;
+}
+
+/* Menu trên màn hình lớn: Hiển thị dạng ngang */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+.menu ul li {
+    padding: 10px 30px;
+    display: inline-block;
+    text-align: left;
+    position: relative; 
+}
+
+.menu ul li:last-child {
+    margin-right: 0; 
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+/* Hiệu ứng khi hover lên các mục menu */
+.menu ul li:hover {
+    background-color: #fbff7a;
+}
+
+.menu a:active {
+    background-color: #fbff7a;
+}
+
+/* Ẩn dropdown mặc định */
+.menu ul li ul.dropdown {
+    display: none; 
+    position: absolute; 
+    left: 0; 
+    top: 100%; 
+    width: 100%;
+    list-style-type: none;
+    background-color: rgb(247, 246, 193, 0.8);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+}
+
+
+.menu ul li:hover > ul.dropdown {
+    display: block;
+}
+
+.menu ul li ul.dropdown li {
+    display: block; 
+}
+
+.menu ul li ul.dropdown li a {
+    font-size: 1.3rem; 
+    color: black;
+}
+
+.menu ul li ul.dropdown li a:hover {
+    background-color: rgb(251, 255, 122); 
+}
+
+
+.menu-hamburger {
+    display: none;
+}
+
+
+/* MessageBox */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px; 
+    text-align: center; 
+    animation: fadeIn 0.3s; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    position: relative;
+    top: 50%; 
+    left: 40%;
+    transform: translateY(-50%); 
+}
+
+/* Hiệu ứng fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    position: absolute; 
+    right: 10px; 
+    top: 10px; 
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content i {
+    font-size: 30px;
+    color: #ffcc00; 
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333; 
+}
+
+button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#cancel-logout {
+    background-color: #f44336;
+}
+
+#cancel-logout:hover {
+    background-color: #d32f2f; 
+}
+
+@media (max-width: 768px) {
+    header{
+        display: none;
+    }
+    .container{
+        margin-top: 500px;
+    }
+    .footer-content{
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        gap: 30px;
+    }
+    .contact, .about, .other, .account{
+        margin-top: 25px;
+        width: 100%;
+    
+    }
+    .contact img{
+        width: 10%;
+    }
+
+    
+    .menu {
+        display: none; 
+    }
+
+    .menu-hamburger {
+        display: block; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 10px;
+        z-index: 1000;
+    }
+
+
+    .menu-hamburger ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-hamburger.active ul {
+        display: flex;
+    }
+
+    .menu-hamburger li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-hamburger .dropdown {
+        display: none;
+    }
+
+    .menu-hamburger li:hover > .dropdown {
+        display: block;
+    }
+
+    .menu-hamburger .dropdown li {
+        margin: 0;
+        padding: 10px 20px;
+    }
+    
+    
+
+    
+    .menu-hamburger .hamburger {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        font-size: 36px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+
+    /* Khi menu hamburger có class 'active', hiển thị menu */
+    .menu-hamburger ul {
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    /* Hiển thị menu khi có class 'active' */
+    .menu-hamburger ul.active {
+        display: flex;
+    }
+
+    .menu-hamburger ul li {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 1.6rem;
+        padding: 17px 10px;
+    }
+
+    .menu-hamburger ul li:hover {
+        background-color: #fbff7a;
+    }
+
+    /* Dropdown cho menu hamburger */
+    .menu-hamburger li {
+        position: relative; 
+    }
+
+    .menu-hamburger li ul.dropdown {
+        display: none;
+        background-color: rgb(247, 246, 193);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding-left: 20px;
+    }
+
+    /* Hiển thị dropdown khi click vào mục li */
+    .menu-hamburger li.active > ul.dropdown {
+        display: block;
+    }
+
+
+    .menu-hamburger li.active {
+        margin-bottom: 50px; 
+    }
+}

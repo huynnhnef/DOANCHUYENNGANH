@@ -1,0 +1,6 @@
+/* Thêm CSS cho các mục menu bị vô hiệu hóa */
+a.disabled {
+    pointer-events: none; /* Ngừng tương tác với mục */
+    opacity: 0.5; /* Làm mờ mục */
+    cursor: not-allowed; /* Thay đổi con trỏ chuột */
+}
